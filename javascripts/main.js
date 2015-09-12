@@ -18,12 +18,10 @@ define(["jquery", "hbs", "bootstrap", "populate-songs", "get-more-songs"],
         $("#song").append(songTemplate(songs));
       });
     });
+    });
 
     $(document).on("click", ".button_delete", function() {
       $(this).closest("div").remove();
-    });
-
-
     });
   }
 );
