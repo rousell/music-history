@@ -1,5 +1,5 @@
-define(["jquery", "hbs", "bootstrap", "populate-songs", "get-more-songs"],
-  function($, Handlebars, bootstrap, first, second) {
+define(["jquery", "hbs", "bootstrap", "populate-songs"],
+  function($, Handlebars, bootstrap, first) {
 
     var moreSongsLoaded = false;
 
@@ -10,15 +10,6 @@ define(["jquery", "hbs", "bootstrap", "populate-songs", "get-more-songs"],
 
     });
 
-
-
-    $("#add_songs").one('click', function() {
-      second.getSongs(function(songs){
-        require(['hbs!../templates/songs'], function(songTemplate) {
-        $("#song").append(songTemplate(songs));
-      });
-    });
-    });
 
     $(document).on("click", ".button_delete", function() {
       $(this).closest("div").remove();

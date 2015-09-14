@@ -4,7 +4,7 @@ define(["jquery"],
     return {
       getSongs: function(doSomethingWithFirstData) {
         $.ajax({
-          url:"javascripts/origsongs.json"
+          url: "https://music-hist.firebaseio.com/.json"
         }).done(function(dataComesFromjQuery) {
           doSomethingWithFirstData(dataComesFromjQuery);
           console.log("Data from jquery", dataComesFromjQuery);
