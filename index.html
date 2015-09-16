@@ -14,7 +14,7 @@
 
 <!-- BOOTSTRAP NAV BAR -->
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -30,9 +30,9 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              <li class="active"><a href="index.html">View Music <span class="sr-only">(current)</span></a></li>
+              <li><a href="song-form.html">Add Music</a></li>
+              <li><a href="#">Profile</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -40,8 +40,8 @@
 
 <!-- MY CODE BEGINS AGAIN -->
 
-    <div class="flex-container">
-      <div class="flex-item nav">
+    <div class="container">
+      <!-- <div class="flex-item nav">
         <nav>
           <ul>
             <li><a href="#">View Music |</a></li>
@@ -49,53 +49,43 @@
             <li><a href="#">Profile</a></li>
           </ul>
         </nav>
-      </div>
-      <div class="flex-item control">
-        <form action="mh-form.html" method="POST">
-          <fieldset>
-            <div>
-              <label for="song-length">Song Length:</label><br />
-              <input type="range" name="song-length" step="0.5" min="2" max="10" value="5" />
-            </div>
-            <div>
-              <label for="artist-list">Artist:</label><br />
-              <input list="artist-list" name="artist" />
-              <datalist id="artist-list">
-                <option value="Arcade Fire">
-                <option value="Radiohead">
-                <option value="Neutral Milk Hotel">
-                <option value="The Format">
-                <option value="Sufjan Stevens">
-            </div>
-            <div>
-              <label for="album-list">Album:</label><br />
-              <input list="album-list" name="album" />
-              <datalist id="album-list">
-                <option value="The Suburbs">
-                <option value="OK Computer">
-                <option value="In An Aeroplane Over the Sea">
-                <option value="Dog Problems">
-                <option value="Carrie & Lowell">
-            </div>
-            <div>
-              <label for="genre-list">Genre:</label><br />
-              <div class="checkbox"><input type="checkbox" name="rock" value="Rock">Rock</div>
-              <div class="checkbox"><input type="checkbox" name="pop" value="Pop">Pop</div>
-              <div class="checkbox"><input type="checkbox" name="blues" value="Blues">Blues</div>
-              <div class="checkbox"><input type="checkbox" name="classical" value="Classical">Classical</div>
-              <div class="checkbox"><input type="checkbox" name="jazz" value="Jazz">Jazz</div>
-              <div class="checkbox"><input type="checkbox" name="hip-hop" value="Hip-Hop">Hip Hop</div>
-            </div>
-            <div>
-              <button type="filter">Filter</button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <div class="flex-item song-list songs_bgrd">
-        <div id="song" class="songs_bgrd"></div>
-        <div><button id="add_songs">More </button>
-        <div id="empty1"></div>
+      </div> -->
+      <div class="row">
+        <div class="col-sm-4 control">
+          <form action="mh-form.html" method="POST">
+            <fieldset>
+              <div>
+                <label for="song-length">Song Length:</label><br />
+                <input type="range" name="song-length" step="0.5" min="2" max="10" value="5" />
+              </div>
+              <div>
+                <label for="artist-list">Artist:</label><br />
+                <input list="artist-list" name="artist" />
+                <datalist id="artist-list"></datalist>
+              </div>
+              <div>
+                <label for="album-list">Album:</label><br />
+                <input list="album-list" name="album" />
+                <datalist id="album-list"></datalist>
+              </div>
+              <div>
+                <label for="genre-list">Genre:</label><br />
+                <div class="checkbox"><input type="checkbox" name="rock" value="Rock">Rock</div>
+                <div class="checkbox"><input type="checkbox" name="pop" value="Pop">Pop</div>
+                <div class="checkbox"><input type="checkbox" name="blues" value="Blues">Blues</div>
+                <div class="checkbox"><input type="checkbox" name="classical" value="Classical">Classical</div>
+                <div class="checkbox"><input type="checkbox" name="jazz" value="Jazz">Jazz</div>
+                <div class="checkbox"><input type="checkbox" name="hip-hop" value="Hip-Hop">Hip Hop</div>
+              </div>
+              <div>
+                <button type="filter">Filter</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="col-sm-8 songs_bgrd">
+          <div id="song" class="songs_bgrd"></div>
+        </div>
       </div>
     </div>
     <script data-main="javascripts/entry" src="/lib/bower_components/requirejs/require.js"></script>

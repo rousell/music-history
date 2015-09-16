@@ -18,8 +18,12 @@
 
 /*Section #2*/
 
+body {
+  padding-top: 70px;
+}
+
 .control {
-  background-color: #4DD7FA;
+  background-color: #aaa;
   font-size: .9em;
   flex-grow: 1;
   display: flex;

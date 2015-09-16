@@ -1,19 +1,10 @@
 /*HEADER*/
-.nav {
-  background-color: #FFB4B0;
-  flex: 1 100%; }
-
-nav li {
-  display: inline-block;
-  text-align: left;
-  font-size: .9em; }
-
-nav a {
-  color: blue; }
-
 /*Section #2*/
+body {
+  padding-top: 70px; }
+
 .control {
-  background-color: #4DD7FA;
+  background-color: #aaa;
   font-size: .9em;
   flex-grow: 1;
   display: flex; }

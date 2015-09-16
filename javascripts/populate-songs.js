@@ -7,7 +7,7 @@ define(["jquery"],
           url: "https://music-hist.firebaseio.com/.json"
         }).done(function(dataComesFromjQuery) {
           doSomethingWithFirstData(dataComesFromjQuery);
-          console.log("Data from jquery", dataComesFromjQuery);
+          // console.log("Data from jquery", dataComesFromjQuery);
         });
       }
     };
